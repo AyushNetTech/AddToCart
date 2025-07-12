@@ -1,11 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import "./Card.css"
 
-const Card =({Title,Image, Price, Rating, handAddToCart, Index, showBtn})=>{
+const Card =({Title,Image, Price, Rating, handAddToCart, Index, showBtn, ShowQ})=>{
+
+    const [quantity, setQuantity]=useState(0);
+        
+    const handleAddQ =()=>{
+        setQuantity(quantity+1)
+    }
+    const handleMinsuQ=()=>{
+        if(quantity==0){
+
+        }
+        else
+            setQuantity(quantity-1)
+    }
     
     const handleClick=()=>{
         handAddToCart(Index)
     }
+
+    
 
     return(
         <div className="Card">
@@ -13,9 +28,18 @@ const Card =({Title,Image, Price, Rating, handAddToCart, Index, showBtn})=>{
                 <img src={Image} alt="" />
             </div>
             <div className="Title">{Title}</div>
-            <div className="Price">{Price}</div>
-            <div className="Rating">{Rating}</div>
+            <div className="PriceRating">
+                <span className="Price">{Price}</span>
+                <span className="Rating">Rating: {Rating}</span>
+            </div>
             {showBtn && (<button className="btn" onClick={handleClick}>Add To Cart</button>)}
+            {ShowQ &&
+                <div className="Quantity">
+                    <button className="AddQ" onClick={handleAddQ}>+</button>
+                    <span className="QNo">{quantity}</span>
+                    <button className="MinusQ" onClick={handleMinsuQ}>-</button>
+                </div>
+            }
         </div>
     )
 }

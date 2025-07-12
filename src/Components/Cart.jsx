@@ -8,7 +8,7 @@ const Cart=({selectedcard})=>{
         <div className="Cart">
             {
                 selectedcard.map((item,index)=>{
-                    return <Card Title={item.Title} Image={item.Image} Price={item.Price} Rating={item.Rating} Index={index} showBtn={false}/>
+                    return <Card Title={item.Title} Image={item.Image} Price={item.Price} Rating={item.Rating} Index={index} showBtn={false} ShowQ={true}/>
                 })
             }
         </div>

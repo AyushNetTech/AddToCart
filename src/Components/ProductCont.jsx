@@ -10,7 +10,7 @@ const ProductCont=({Data, handAddToCart})=>{
         <div className="ProductCont">
             {
                 cards.map((item,index)=>{
-                    return <Card Title={item.Title} Image={item.Image} Price={item.Price} Rating={item.Rating} handAddToCart={handAddToCart} Index={index} showBtn={true}/>
+                    return <Card Title={item.Title} Image={item.Image} Price={item.Price} Rating={item.Rating} handAddToCart={handAddToCart} Index={index} showBtn={true} ShowQ={false}/>
                 })
             }
         </div>

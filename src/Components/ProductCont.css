@@ -1,0 +1,10 @@
+.ProductCont{
+    background-color: #464545;
+    height: 100vh;
+    width: 70%;
+    padding: 10px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

@@ -9,7 +9,7 @@ const Card =({Title,Image, Price, Rating, handAddToCart, Index, showBtn, ShowQ})
         setQuantity(quantity+1)
     }
     const handleMinsuQ=()=>{
-        if(quantity==0){
+        if(quantity===0){
 
         }
         else
